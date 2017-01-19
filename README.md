@@ -21,3 +21,5 @@ npm run build
 npm i asar -g
 npm run build 
 ```
+
+![](http://7tebxh.com1.z0.glb.clouddn.com/DD77B5DF-4F99-4051-9946-FA72F6DDF252.png)
