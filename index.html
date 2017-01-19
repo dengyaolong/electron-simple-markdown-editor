@@ -1,19 +1,42 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+<head>
+  <title>Markdown Editor</title>
+  <style>
+    html, body, #editor {
+      margin: 0;
+      height: 100%;
+      color: #333;
+    }
 
-  <script>
-    // You can also require other files to run in this process
-    require('./renderer.js')
-  </script>
-</html>
+    textarea, #editor div {
+      display: inline-block;
+      width: 49%;
+      height: 100%;
+      vertical-align: top;
+      box-sizing: border-box;
+      padding: 0 20px;
+    }
+
+    textarea {
+      border: none;
+      border-right: 1px solid #ccc;
+      resize: none;
+      outline: none;
+      background-color: #f6f6f6;
+      font-size: 14px;
+      padding: 20px;
+    }
+
+    code {
+      color: #f66;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="editor">
+      <textarea id="md-content" oninput="update()"></textarea>
+      <div id="html-content"></div>
+    </div>
+  </main>
+  <script src="./markdown.js"></script>
+</body>

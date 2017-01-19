@@ -1,22 +1,24 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "markdown-electron",
+  "version": "1.0.1",
+  "description": "A simple markdown editor",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package": "asar pack SimpleMarkdown-darwin-x64/SimpleMarkdown.app/Contents/Resources/app SimpleMarkdown-darwin-x64/SimpleMarkdown.app/Contents/Resources/app.asar",
+    "build": "electron-packager . SimpleMarkdown --platform=darwin --arch=x64 --ignore=node_modules/electron-*"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/dengyaolong/electron-simple-markdown-editor.git",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "markdown"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "dyl",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^1.4.1"
+  },
+  "dependencies": {
+    "marked": "^0.3.6"
   }
 }
