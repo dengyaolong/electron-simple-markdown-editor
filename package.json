@@ -16,7 +16,7 @@
   "author": "dyl",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^1.4.1"
+    "electron": "^9.1.0"
   },
   "dependencies": {
     "marked": "^0.3.6"
